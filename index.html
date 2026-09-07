@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitWall — never miss a review request</title>
+<meta name="description" content="A macOS menu-bar app that watches your GitHub pull requests and tells you the moment someone requests changes, re-requests a review, or CI goes red.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gitwall.vahsir.in">
+<meta property="og:title" content="GitWall — never miss a review request">
+<meta property="og:description" content="A macOS menu-bar app that watches your GitHub pull requests and tells you the moment someone requests changes, re-requests a review, or CI goes red.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="banner">
+  <span>Free and open source.</span>
+  <span class="sep">·</span>
+  <span>More apps &amp; games at <a href="https://vahsir.in/store">vahsir.in/store</a></span>
+  <span class="sep">·</span>
+  <span>About me at <a href="https://vahsir.in">vahsir.in</a></span>
+</div>
+
+<nav class="nav">
+  <a class="logo" href="#">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <rect width="32" height="32" rx="8" fill="#161b22"/>
+      <path d="M10 22.5V11.2" stroke="#8b949e" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="10" cy="24" r="3" fill="none" stroke="#3fb950" stroke-width="2"/>
+      <circle cx="10" cy="9" r="3" fill="none" stroke="#58a6ff" stroke-width="2"/>
+      <path d="M10 12v2a4 4 0 0 0 4 4h2" stroke="#8b949e" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <circle cx="23" cy="9" r="3.4" fill="none" stroke="#58a6ff" stroke-width="2"/>
+      <circle cx="24.5" cy="7.5" r="4.5" fill="#f85149" stroke="#161b22" stroke-width="1.4"/>
+    </svg>
+    GitWall
+  </a>
+  <div class="nav-links">
+    <a class="link" href="#features">Features</a>
+    <a class="link" href="#signals">Signals</a>
+    <a class="link" href="#install">Install</a>
+  </div>
+  <div class="nav-actions">
+    <a class="btn btn-secondary" href="https://github.com/Vahsir7/GitWall" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+      GitHub
+    </a>
+    <a class="btn btn-primary" href="#install">Install</a>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Native macOS · menu bar app</div>
+      <h1>Never miss a<br><span class="accent">review request</span> again.</h1>
+      <p class="hero-sub">GitWall watches your GitHub pull requests and tells you the moment someone
+        requests changes, re-requests a review, or CI goes red — grouped by repo, colour-coded by
+        whose move it is, with notifications only when something actually changes.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#install">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Install GitWall
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/Vahsir7/GitWall" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          View source
+        </a>
+      </div>
+
+      <div class="install-cmd">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        <code id="cloneCmd">git clone https://github.com/Vahsir7/GitWall.git &amp;&amp; cd GitWall &amp;&amp; ./build.sh --install</code>
+        <button class="install-cmd-copy" id="copyBtn" title="Copy to clipboard" aria-label="Copy install command">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+      </div>
+
+      <div class="hero-badges">
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free &amp; open source</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20c4.4 0 8-1.8 8-4V6c0-2.2-3.6-4-8-4S4 3.8 4 6v10c0 2.2 3.6 4 8 4Z"/></svg> macOS 14+</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Token stays in Keychain</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> No Dock icon</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="demo-frame">
+        <div class="demo-menubar">
+          <span class="mb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h6"/></svg> GitWall <span class="mb-count">3</span></span>
+          <span>9:41</span>
+        </div>
+        <div class="demo-header">
+          <div class="demo-avatar"></div>
+          <div class="who">Rishav Bairagya<span>@vahsir7</span></div>
+        </div>
+
+        <div class="demo-repo">
+          <div class="demo-repo-head">
+            <span>gitwall</span>
+            <div class="repo-badges"><span class="rbadge red">2</span></div>
+          </div>
+          <div class="pr-row"><span class="pr-dot red"></span><span class="pr-title">Fix popover collapse state persisting</span><span class="pr-num">#42</span></div>
+          <div class="pr-row"><span class="pr-dot red"></span><span class="pr-title">Add re-request notification copy</span><span class="pr-num">#39</span></div>
+        </div>
+
+        <div class="demo-repo">
+          <div class="demo-repo-head">
+            <span>excuse-me</span>
+            <div class="repo-badges"><span class="rbadge yellow">1</span></div>
+          </div>
+          <div class="pr-row"><span class="pr-dot yellow"></span><span class="pr-title">Whiteboard sync over flaky LAN</span><span class="pr-num">#118</span></div>
+          <div class="pr-row"><span class="pr-dot green"></span><span class="pr-title">Bump AVFoundation min target</span><span class="pr-num">#114</span></div>
+        </div>
+
+        <div class="demo-repo">
+          <div class="demo-repo-head"><span>RecoilDuel</span></div>
+          <div class="pr-row"><span class="pr-dot teal"></span><span class="pr-title">Delta-time bullet physics</span><span class="pr-num">#27</span></div>
+        </div>
+      </div>
+      <p class="demo-caption">The popover — grouped by repo, loudest one first.</p>
+    </div>
+  </div>
+</header>
+
+<section id="features" class="wrap section">
+  <div class="section-head">
+    <div class="eyebrow"><span class="dot"></span> What it does</div>
+    <h2>Three things it does exceptionally well.</h2>
+    <p>No dashboards to check. It sits in your menu bar and tells you exactly what changed.</p>
+  </div>
+  <div class="feature-grid">
+    <div class="card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg></div>
+      <h3>Tracks the right PRs</h3>
+      <p>Automatically pulls in PRs assigned to you, PRs where your review is requested, and — toggleable — PRs you authored. Paste a link, <code>owner/repo#123</code>, or a git ref to watch anything else.</p>
+    </div>
+    <div class="card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+      <h3>Only pings on a transition</h3>
+      <p>A PR is never announced the first time GitWall sees it — only when its state actually changes underneath you: changes requested, your review requested, approved, CI failing, merged, closed.</p>
+    </div>
+    <div class="card">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div>
+      <h3>Grouped, ordered, remembered</h3>
+      <p>PRs sit under their repo; repos sort by the loudest PR inside so what needs attention floats to the top. Collapse a repo header and it stays collapsed across restarts.</p>
+    </div>
+  </div>
+</section>
+
+<section id="signals" class="wrap section">
+  <div class="section-head">
+    <div class="eyebrow"><span class="dot"></span> Colour means one thing</div>
+    <h2>Whose move it is, at a glance.</h2>
+    <p>Repo headers carry up to two badges — <strong style="color:var(--red)">red</strong> for changes you owe,
+      <strong style="color:var(--yellow)">yellow</strong> for reviews you owe. The menu-bar count is only the red ones.</p>
+  </div>
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:var(--red)"></span><div><strong>Changes requested</strong><span>A reviewer asked for changes and hasn't been re-requested yet.</span></div></div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--yellow)"></span><div><strong>Awaiting review</strong><span>Reviewers are assigned but haven't ruled — the ball's in their court.</span></div></div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--green)"></span><div><strong>Approved</strong><span>Ready to merge, as far as review is concerned.</span></div></div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--teal)"></span><div><strong>Working on it</strong><span>You've marked the fix as pushed — muted until new review activity lands.</span></div></div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--grey)"></span><div><strong>Everything else</strong><span>Commented, draft, or no reviewers yet.</span></div></div>
+  </div>
+</section>
+
+<section id="how" class="wrap section">
+  <div class="section-head">
+    <div class="eyebrow"><span class="dot"></span> How it works</div>
+    <h2>Build it once. It polls quietly in the background.</h2>
+  </div>
+  <div class="how-grid">
+    <div class="how-step">
+      <div class="num">01</div>
+      <h4>Sign in</h4>
+      <p>Picks up your <code>gh</code> CLI token automatically, or paste a personal access token with <code>repo</code> scope. Stored in the login Keychain — never on disk.</p>
+    </div>
+    <div class="how-step">
+      <div class="num">02</div>
+      <h4>It polls in the background</h4>
+      <p>Every 120s by default (30s–30min in settings). Each poll costs a handful of GitHub API calls, well inside normal rate limits.</p>
+    </div>
+    <div class="how-step">
+      <div class="num">03</div>
+      <h4>Act only when pinged</h4>
+      <p>Click a notification to jump straight to the PR on GitHub. Mark it "working on it" once you've pushed a fix, or ignore it entirely.</p>
+    </div>
+  </div>
+</section>
+
+<section id="install" class="wrap section">
+  <div class="section-head">
+    <div class="eyebrow"><span class="dot"></span> Install</div>
+    <h2>Build from source — it's a two-minute build.</h2>
+    <p>No Homebrew tap yet, so GitWall is installed by building the Swift package locally.</p>
+  </div>
+  <div class="install-box">
+    <div class="install-steps">
+      <div class="install-step">
+        <span class="n">1</span>
+        <div>
+          <h5>Prerequisites</h5>
+          <p>macOS 14 or later, and Xcode 16+ (or the Swift 6 command line tools) for <code>swift build</code>.</p>
+        </div>
+      </div>
+      <div class="install-step">
+        <span class="n">2</span>
+        <div>
+          <h5>Clone and build</h5>
+          <p>Builds a universal (arm64 + x86_64) <code>GitWall.app</code> and copies it to <code>/Applications</code>.</p>
+          <div class="code-block"><code>git clone https://github.com/Vahsir7/GitWall.git
+cd GitWall
+chmod +x build.sh
+./build.sh --install</code></div>
+        </div>
+      </div>
+      <div class="install-step">
+        <span class="n">3</span>
+        <div>
+          <h5>Launch and sign in</h5>
+          <p>Open GitWall from <code>/Applications</code> — it appears in the menu bar with no Dock icon. If the <code>gh</code> CLI is installed and logged in, it authenticates automatically; otherwise open the gear icon and paste a personal access token.</p>
+        </div>
+      </div>
+      <div class="install-step">
+        <span class="n">4</span>
+        <div>
+          <h5>Optional: start at login</h5>
+          <p>System Settings → General → Login Items → add GitWall.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom: clamp(40px, 6vw, 70px);">
+  <div class="closer">
+    <h2>Free. Open source. Native.</h2>
+    <p>No subscription. No account. No tracking. Just fewer missed review requests.</p>
+    <div class="closer-ctas">
+      <a class="btn btn-primary" href="#install">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+        Install GitWall
+      </a>
+      <a class="btn btn-secondary" href="https://github.com/Vahsir7/GitWall" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        Star on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Built by <a href="https://vahsir.in">Rishav Bairagya</a></span>
+  <div class="footer-links">
+    <a href="https://vahsir.in/store">Store</a>
+    <a href="https://github.com/Vahsir7/GitWall" target="_blank" rel="noopener noreferrer">Source</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
