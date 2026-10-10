@@ -314,6 +314,12 @@ h2 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin-bottom: 10px; }
 .how-step h4 { font-size: 1rem; margin-bottom: 6px; }
 .how-step p { color: var(--text-mid); font-size: 0.9rem; line-height: 1.6; }
 
+/* ── what's new ── */
+.whatsnew { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px 22px; }
+.whatsnew li { position: relative; padding: 10px 12px 10px 34px; background: var(--panel); border: 1px solid var(--border-soft); border-radius: 10px; color: var(--text-mid); font-size: 0.9rem; }
+.whatsnew li::before { content: "✓"; position: absolute; left: 12px; top: 10px; color: var(--green); font-weight: 700; }
+.whatsnew strong { color: var(--text); font-weight: 600; }
+
 /* ── app demo (sidebar + cards) ── */
 .demo-app { display: grid; grid-template-columns: 150px minmax(0, 1fr); min-height: 330px; }
 .demo-side { background: var(--bg-raised); border-right: 1px solid var(--border-soft); padding-bottom: 10px; }
